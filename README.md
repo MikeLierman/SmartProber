@@ -15,7 +15,8 @@ GETTING STARTED
 3. Edit the batch file and point the URL to yours.
 4. Test it. Move the batch file to an empty folder. Open Admin CMD, cd to batch file, and execute. Script will check if the SmartProber.exe binary already exists, it it does, it's executed, if not, it's downloaded. Default save/run directory is C:\IT. This can be changed.
 5. SmartProber.exe will populate all HDDs and SSDs and all of their associated values, including power-on hours, power cnt, bad sections, pending sectors, etc. After which the script will return an exit code used by your RMM dashboard to determine PASS or FAIL on the "check." If you've done everything correctly, in command prompt you will see a list of HDDs or SSDs and numbers associated for each. If you do not see this, you messed up, go back to step 1.
-6. After verifying that you understand how the script functions, go ahead and upload JUST THE BATCH FILE to your RMM dashboard script manager. Deploy it to several machines as a test before deploying to every connected agent.
+6. After verifying that you understand how the script functions, go ahead and upload JUST THE BATCH FILE to your RMM dashboard script manager. Ensure that you CHANGE the default TIMEOUT to 120 seconds. It could take up to this long for the remote file to download and the script to execute.
+7. Deploy it to several machines as a test before deploying to every connected agent.
 
 ### Download
 https://github.com/MikeLierman/SmartProber/releases
